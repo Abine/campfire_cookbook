@@ -1,0 +1,57 @@
+{
+  "name": "campfire",
+  "description": "LWRP for sending messages to Campfire rooms",
+  "long_description": "",
+  "maintainer": "Cameron Johnston",
+  "maintainer_email": "cameron@rootdown.net",
+  "license": "Apache 2.0",
+  "platforms": {
+  },
+  "dependencies": {
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+    "campfire/api_token": {
+      "display_name": "Campfire API Token",
+      "description": "API token of Campfire account to use.",
+      "required": "required",
+      "recipes": [
+        "campfire::default"
+      ],
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string"
+    },
+    "campfire/subdomain": {
+      "display_name": "Campfire account (subdomain)",
+      "description": "Campfire subdomain to publish messages to.",
+      "required": "optional",
+      "default": "abine",
+      "recipes": [
+        "campfire::default"
+      ],
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string"
+    }
+  },
+  "groupings": {
+  },
+  "recipes": {
+    "campfire::default": "Default cookbook recipe for setting up Campfire for chef"
+  },
+  "version": "0.1.0"
+}
